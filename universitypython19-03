@@ -1,0 +1,116 @@
+#wap to perform arithmetic operation using functional programming approach
+#functions helps us to achieve modularity approach
+import sys
+def addition(num1,num2): #called function
+  print("Addition :", num1+num2)
+
+def substraction(num1,num2): #called function
+  print("Substraction :", num1-num2)
+
+def multiplication(num1,num2): #called function
+  print("Multiplication :", num1*num2)
+
+def division(num1,num2): #called function
+  print("Division :", num1/num2)
+
+while True:
+  print("1.Addition")
+  print("2.Substraction")
+  print("3.Multiplication")
+  print("4.Division")
+  print("5.Exit")
+  choice = int(input("Enter your choice from above options : "))
+  if choice == 5:
+    sys.exit()
+  val1 = int(input("Enter first value : "))
+  val2 = int(input("Enter second value : "))
+  if choice == 1:
+    addition(val1,val2)
+  elif choice == 2:
+    substraction(val1,val2)
+  elif choice == 3:
+    multiplication(val1,val2)
+  elif choice == 4:
+    division(val1,val2)
+  else:
+    print("you have enter the wrong choice")
+
+
+
+#nested function
+def outerFunction():
+  print("outer function ")#second
+  def innerFunction():
+    print("inner function ")
+    innerFunction()#third
+outerFunction()#first
+
+#input= Tanmay is good programmer
+name ="Tanmay is good programmer"
+count =1
+for i in name:
+  if i ==" ":
+    count +=1
+  else:
+    continue
+print("Total word count=",count)
+
+init_tuple = ()
+print(init_tuple.__len__())
+
+init_tuple_a = 'a', 'b'
+init_tuple_b = ('a', 'b')
+print(init_tuple_a == init_tuple_b)
+
+init_tuple_a = '1','2'
+init_tuple_b = ('3', '4')
+print(init_tuple_a + init_tuple_b)
+
+
+my_list = [1,2,3]
+init_tuple = ('Python',) * (len(my_list) - my_list[-1])
+print(init_tuple)
+
+init_tuple = ('Python') * 3
+print(type(init_tuple))
+
+
+
+
+init_tuple = ((1, 2),) *7
+print(len(init_tuple[3:8]))
+
+s=""
+s1=s.replace("difficult", "easy")
+print(s1)
+
+s="ababababababab"
+s1=s.replace("a","b")
+print(s1)
+
+city=input("Enetr your city name:")
+scity=city.strip()
+if scity=='Hyderabad':
+  print("hello hyderabad")
+elif scity=='Pune':
+  print("hello Pune")
+elif scity=='Goa':
+  print("hello Goa")
+else:
+  print("your entered city is wrong")
+
+
+s=[ i*i for i in range(1,11)]
+print(s)
+
+val=[2**i for i in range(1,6)]
+print(val)
+
+val2=[i for i in s if i%2==0]
+print(val2)
+
+squares={x:x*x for x in range(1,6)}
+print(squares)
+
+doubles={x:2*x for x in range(1,6)}
+print(doubles)
