@@ -1,0 +1,75 @@
+#function
+def msg(): #called function
+  print("hello world")
+msg()
+
+
+#function
+def add(): #called function
+  n1=int(input("enter a number"))
+  n2=int(input("enter a number"))
+  print("And=", n1+n2)
+add()
+
+
+#how to chec multiple values
+def add(): #called function
+  n1=int(input("enter a number"))
+  n2=int(input("enter a number"))
+  sum=n1+n2
+  sub=n1-n2
+  mul=n1*n2
+  div=n1/n2
+  return sum,sub,mul,div
+result=add()
+print(result)
+
+#positional argument
+#keyword argument
+#default argument
+#variable length argument/variable no. of argument
+
+#keyword argument
+
+def personalInfo(fname,lname):
+  print("First Name=",fname)
+  print("Last Name=",lname)
+fname="Prashant"
+lname="Jha"
+personalInfo(fname,lname)
+
+#positional argument
+
+def personalInfo(fname,lname):
+  print("First Name=",fname)
+  print("Last Name=",lname)
+
+personalInfo("Prahant","Jha")
+
+
+#default argument
+
+def cityName(city="nagpur"):
+    print(city)
+cityName("Mumbai")
+cityName("Delhi")
+cityName()
+
+
+
+#variable length argument
+
+def studentName(*name):
+  print(name)
+studentName("Tanuu","Janahvi","Niket","Ishaan")
+
+mylist=[5,2,8,9,7,1]
+#searching element 7
+def searchElement(target):
+   for i in range(len(mylist)):
+    if target==mylist[i]:
+       print("element found at index",i)
+       break
+    else:
+       print("element not found")
+searchElement(7)
