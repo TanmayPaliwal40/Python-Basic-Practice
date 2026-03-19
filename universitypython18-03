@@ -1,0 +1,50 @@
+import re
+var = 'gasggss54@#vcskxk*'
+count  =0
+for i in var:
+
+  z =ord(i)
+
+  if z>=97 and z<=122:
+    continue
+  elif z>=48 and z<=57:
+    continue
+
+
+
+A=[1,2,3]
+B=[2,3,4]
+C=[3,4,5]
+for i in A:
+  if i in B and i in C:
+    print(i)
+
+#move zeros to the end
+A=[0,1,0,3,12]
+for i in A:
+  if i ==0:
+    A.remove(i)
+    A.append(i)
+  else:
+    continue
+print(A)
+
+#second largest element
+B=[7,3,9,2,8]
+B.sort()
+print(B)
+print(B[-2])
+
+#sum of distances between adjacent nos in an array
+A=[5,6,7,8,9]
+sum_dist = sum(abs(A[i] - A[i-1]) for i in range(1, len(A)))
+
+print(sum_dist)
+
+N=int(input())
+sum=0
+A=[]
+for i in range(N):
+  a=int(input("Enter element value:"))
+  A.append(a)
+for j in range(len[A]):
